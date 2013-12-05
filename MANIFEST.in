@@ -1,0 +1,3 @@
+include README
+recursive-include ip_filter/templates *
+recursive-include ip_filter/static *

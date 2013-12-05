@@ -1,0 +1,25 @@
+{% load i18n %}
+{{ spec.form.media }}
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/jquery.ba-bbq.js"></script>
+<script type="text/javascript" src="/static/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery-ui-i18n.js"></script>
+<script type="text/javascript" src="/static/js/ip_filter.js"></script>
+
+<script type="text/javascript">
+    {% get_current_language as LANGUAGE_CODE %}
+    var lang = '{{ LANGUAGE_CODE }}'
+</script>
+<style>
+    .calendarbox {
+        margin-left: -200px;
+        z-index: 1000;
+    }
+
+    .daterange_form input {
+        width: 100%;
+    }
+</style>
+{{ spec.form.as_one_div }}
+<p>
+</p>
