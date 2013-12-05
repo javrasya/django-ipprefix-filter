@@ -1,0 +1,28 @@
+django-daterange-filter
+=====================
+
+Add the option to filter by a custom ip prefix filter on the admin. This allows
+to inputs to be used as ip and mask seperately for an ip prefix field.
+
+**IMPORTANT:** this will work with Django 1.4. I won't work with previous Django
+versions.
+
+Installation
+-----------
+
+Use pip/easy_install
+
+    pip install git+git://github.com/javrasya/django-ipprefix-filter.git
+
+
+Add ip_filter to settings.INSTALLED_APPS. Then configure your admin:
+
+	from ip_filter.filter import IpMaskFilter
+
+	...
+
+    list_filter = (
+	    ...
+		('created', IpMaskFilter),
+		...
+	)
