@@ -1,7 +1,7 @@
 import copy
 from django.utils.http import urlencode
 
-__author__ = 'ahmetdal'
+_s_author__ = 'ahmetdal'
 
 from django import forms
 from django.contrib import admin
@@ -32,7 +32,7 @@ class IpMaskForm(forms.Form):
             order by mask;
         """ % (self.field_name, self.field_name, table_name))
         self.choices = [(c, c) for (c,) in c.fetchall()]
-        self.choices.insert(0, (None, _('All')))
+        self.choices.insert(0, ('', _('All')))
         self.fields['%s__iendswith' % self.field_name] = forms.ChoiceField(label='', choices=self.choices, localize=True, required=False,
                                                                            widget=Select(attrs={'class': 'vIpField'}))
 
