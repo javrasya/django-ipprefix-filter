@@ -5,7 +5,7 @@ setup(
     version='0.1.2',
     description='Allow to filter by a prefix fields as ip and mask as seperated.',
     long_description=open('README').read(-1),
-    author='Ahmet DAL,
+    author='Ahmet DAL',
     author_email='ceahmetdal@gmail.com',
     url='https://github.com/javrasya/django-ipprefix-filter.git',
     keywords=[
